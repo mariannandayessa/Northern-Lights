@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Northern Lights</title>
+	<style>
+
+	/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+  background: #090a0f;
+  position: relative;
+  z-index: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Aurora container and animation */
+.aurora-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.aurora {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 255, 128, 0.3) 0%,
+    rgba(0, 255, 255, 0.2) 25%,
+    rgba(0, 128, 255, 0.3) 50%,
+    rgba(255, 0, 255, 0.15) 75%,
+    rgba(0, 255, 128, 0.3) 100%
+  );
+  animation: auroraFlow 30s ease-in-out infinite alternate;
+  filter: blur(80px);
+  transform: rotate(15deg);
+  opacity: 0.6;
+}
+
+@keyframes auroraFlow {
+  0% {
+    transform: translate(-30%, -30%) rotate(15deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(15deg);
+  }
+}
+
+/* Navigation */
+nav {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+nav a {
+  color: #82f7ff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffe0;
+}
+
+/* Main Content */
+main {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+h1, h2, h3{
+  color: #a0f9e0;
+  text-shadow: 0 0 10px #82f7ff;
+}
+
+
+li{
+	color: #a0f9e0;
+  text-shadow: 0 0 10px #82f7ff;
+
+
+}
+
+p{
+  color: #a0f9e0;
+  text-shadow: 0 0 10px #82f7ff;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+
+
+.aurora2 {
+  animation: auroraFlow2 40s ease-in-out infinite alternate;
+  opacity: 0.4;
+}
+
+@keyframes auroraFlow2 {
+  0% {
+    transform: translate(20%, -20%) rotate(-10deg);
+  }
+  100% {
+    transform: translate(-10%, 10%) rotate(-10deg);
+  }
+}
+
+
+#starry-sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: transparent;
+}
+
+
+#aurora-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  filter: brightness(0.6) saturate(1.3);
+}
+
+.music-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+
+
+
+.contact-box {
+	margin-top: 50px;
+	padding: 50px;
+	margin: 50px;
+	border-radius: 200px;
+	}
+
+
+
+
+	</style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+<video autoplay muted loop playsinline id="aurora-video">
+  <source src="auro.mp4" type="video/mp4"/>
+</video>
+
+
+
+
+  <div class="aurora-container"><div class="aurora"></div></div>
+
+  
+
+  <main>
+    <h1 style="font-size: 3rem;">About</h1>
+	&nbsp;
+    <p>Discover the beauty of the Northern Lights from around the world.</p>
+  </main>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+	<a href="history.html">History</a>
+    <a href="index.html">Gallery</a>
+    <a href="aboutus.html">About Us</a>
+  </nav>
+	&nbsp;
+	<div class="contact-box">
+	
+	
+<h2>🔬 The Science Behind the Lights</h2>
+	&nbsp;
+<p style="font-size: 18px;">The Northern Lights are caused by interactions between solar wind (charged particles from the Sun) and Earth’s magnetosphere.</p>
+	&nbsp;
+<h3>1. Solar Wind: Streams of charged particles (mainly electrons and protons) are emitted from the Sun.</h3>
+
+<h3>2. Magnetic Field: Earth's magnetic field pulls these particles toward the poles.</h3>
+
+<h3>3. Atmospheric Collision: When particles collide with oxygen and nitrogen in the atmosphere, they excite the gases, which then release light.</h3>
+	&nbsp;
+<h2>🎨 Colors & Causes:</h2>
+<ul>
+
+<li style="font-size: 18px;"><b>Green</b> – Most common (oxygen, ~100 km altitude)</li>
+
+<li style="font-size: 18px;"><b>Red</b> – Rare (high-altitude oxygen, ~200+ km)</li>
+
+<li style="font-size: 18px;"><b>Blue/Purple</b> – Nitrogen molecules</li>
+
+<li style="font-size: 18px;"><b>Pink & Yellow</b> – Combinations of gases</li>
+</ul>
+&nbsp;
+
+<h2>🖼️ Appearance and Forms</h2>
+	&nbsp;
+<p style="font-size: 18px;">The aurora can manifest in many forms:</p>
+	&nbsp;
+	<ul>
+<li style="font-size: 18px;"><b>Arcs</b>: Long, smooth lines stretching across the sky.</li>
+
+<li style="font-size: 18px;"><b>Bands:</b> Undulating, ribbon-like shapes.</li>
+
+<li style="font-size: 18px;"><b>Rays:</b> Vertical beams rising into the sky.</li>
+
+<li style="font-size: 18px;"><b>Coronas:</b> Burst-like formations radiating overhead.</li>
+	</ul>
+
+
+&nbsp;
+
+<h2>⚗️ Its Contribution to Modern Science:
+	<ul style="font-size: 18px;">
+  <li><b>1. Understanding Space Weather:</b> Auroras are visible signs of space weather — the interaction between solar wind (charged particles from the Sun) and Earth's magnetic field. Studying auroras helps scientists understand how solar activity affects Earth, which is crucial for predicting solar storms.</li>
+
+  <li><b>2. Protecting Satellites and Communications:</b> Solar storms can damage satellites, disrupt GPS signals, and interfere with radio communications. Monitoring auroras helps scientists detect when and where space weather events might happen, allowing for protective measures (like putting satellites into safe mode).</li>
+
+  <li><b>3. Power Grid Protection:</b> Strong geomagnetic storms, often associated with auroras, can induce electric currents that overload and damage power grids. Understanding auroral activity helps energy companies prepare for potential disruptions and prevent large-scale blackouts.</li>
+
+  <li><b>4. Magnetosphere Research:</b> Auroras are caused by changes in Earth's magnetosphere — the magnetic field that shields the planet from cosmic radiation. Studying auroras helps scientists learn more about how Earth's magnetic field behaves and evolves over time.</li>
+
+  <li><b>5. Atmospheric Studies:</b> By analyzing the light emissions during auroras, researchers can study the composition and behavior of the upper atmosphere (like the ionosphere), where the collisions occur. This has applications in understanding climate patterns and atmospheric dynamics.</li>
+
+  <li><b>6. Developing Predictive Models:</b> Data from auroral activity feeds into models that predict solar weather. These models help airlines, military operations, astronauts, and many industries prepare for solar radiation hazards.</li>
+</ul>
+
+
+
+
+
+
+	&nbsp;
+<h2>🗺️ Where to See the Northern Lights</h2>
+	&nbsp;
+<p style="font-size: 18px;">Ideal viewing locations fall within the Auroral Oval—a ring around the magnetic poles.</p>
+	&nbsp;
+<h3>Best Places:</h3>
+<ul>
+<li style="font-size: 18px;"><b>Norway</b> (Tromsø, Svalbard, Lofoten Islands)</li>
+
+<li style="font-size: 18px;"><b>Iceland</b></li>
+
+<li style="font-size: 18px;"><b>Sweden</b> (Abisko)</li>
+
+<li style="font-size: 18px;"><b>Finland</b> (Lapland)</li>
+
+<li style="font-size: 18px;"><b>Greenland</b></li>
+
+<li style="font-size: 18px;"><b>Canada</b> (Yukon, Alberta, Northwest Territories)</li>
+
+<li style="font-size: 18px;"><b>Alaska, USA</b></li>
+</ul>
+
+	&nbsp;
+<h2>🕰️ When to See the Northern Lights</h2>
+	&nbsp;
+	<ul>
+<li style="font-size: 18px;"><b>Season</b>: Best from September to March.</li>
+
+<li style="font-size: 18px;"><b>Time</b>: Darkest hours (10 PM–2 AM).</li>
+
+<li style="font-size: 18px;"><b>Conditions</b>: Clear skies, minimal light pollution.</li>
+
+<li style="font-size: 18px;"><b>Solar Activity</b>: Stronger during solar maximum (occurs roughly every 11 years).</li>
+	</ul>
+	&nbsp;
+
+	&nbsp;
+<h2>🌍 Aurora Australis (Southern Lights)</h2>
+	&nbsp;
+<p style="font-size: 18px;">The Southern Hemisphere’s version of the Northern Lights:</p>
+	&nbsp;
+	<ul>
+<li style="font-size: 18px;">Best seen in <b>Antarctica</b>, <b>Tasmania</b>, and <b>New Zealand</b>.</li>
+
+<li style="font-size: 18px;">Less commonly viewed due to fewer land masses at high southern latitudes.</li>
+
+<li style="font-size: 18px;">Just as vivid and beautiful as their northern counterpart.</li>
+
+	</ul>
+
+
+
+</div>
+<canvas id="starry-sky"></canvas>
+
+<script>
+  const canvas = document.getElementById('starry-sky');
+  const ctx = canvas.getContext('2d');
+
+  let stars = [];
+  const starCount = 150;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  for (let i = 0; i < starCount; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5 + 0.5,
+      alpha: Math.random(),
+      delta: Math.random() * 0.02
+    });
+  }
+
+  function animateStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let star of stars) {
+      star.alpha += star.delta;
+      if (star.alpha <= 0 || star.alpha >= 1) star.delta = -star.delta;
+      ctx.globalAlpha = star.alpha;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+    }
+    requestAnimationFrame(animateStars);
+  }
+
+  animateStars();
+</script>
+
+<!-- Music Toggle -->
+  <button class="music-toggle" onclick="toggleMusic()">🔊</button>
+  <audio id="bg-music" src="aur.mp3" loop></audio>
+
+<!-- Music Controls -->
+  <script>
+    const music = document.getElementById('bg-music');
+    let playing = false;
+    function toggleMusic() {
+      playing ? music.pause() : music.play();
+      playing = !playing;
+    }
+  </script>
+
+</body>
+</html>

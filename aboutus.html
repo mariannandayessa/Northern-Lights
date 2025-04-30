@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Northern Lights</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      overflow-x: hidden;
+      background: #090a0f;
+      position: relative;
+      z-index: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Aurora Background */
+    .aurora-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .aurora {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(0, 255, 128, 0.3) 0%,
+        rgba(0, 255, 255, 0.2) 25%,
+        rgba(0, 128, 255, 0.3) 50%,
+        rgba(255, 0, 255, 0.15) 75%,
+        rgba(0, 255, 128, 0.3) 100%
+      );
+      animation: auroraFlow 30s ease-in-out infinite alternate;
+      filter: blur(80px);
+      transform: rotate(15deg);
+      opacity: 0.6;
+    }
+
+    @keyframes auroraFlow {
+      0% { transform: translate(-30%, -30%) rotate(15deg); }
+      100% { transform: translate(0%, 0%) rotate(15deg); }
+    }
+
+    .aurora2 {
+      animation: auroraFlow2 40s ease-in-out infinite alternate;
+      opacity: 0.4;
+    }
+
+    @keyframes auroraFlow2 {
+      0% { transform: translate(20%, -20%) rotate(-10deg); }
+      100% { transform: translate(-10%, 10%) rotate(-10deg); }
+    }
+
+    /* Navigation */
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+	margin-bottom: 2rem;
+    }
+
+    nav a {
+      color: #82f7ff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffe0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 4rem auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 1rem;
+    }
+
+    h1, h2 {
+      color: #a0f9e0;
+      text-shadow: 0 0 10px #82f7ff;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      color: #a0f9e0;
+      text-shadow: 0 0 10px #82f7ff;
+      margin-bottom: 1rem;
+    }
+
+    /* Team Section */
+   
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-member {
+  margin-bottom: 20px;
+}
+
+.bottom-members {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.member {
+  text-align: center;
+}
+.member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+
+    #starry-sky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    #aurora-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -3;
+      filter: brightness(0.6) saturate(1.3);
+    }
+
+    .music-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+  </style>
+</head>
+<body>
+
+<video autoplay muted loop playsinline id="aurora-video">
+  <source src="auro.mp4" type="video/mp4" />
+</video>
+
+<div class="aurora-container"><div class="aurora"></div></div>
+<canvas id="starry-sky"></canvas>
+
+<main>
+  <h1 style="font-size: 3rem;">About Us</h1>
+  <p>We are a passionate group of Aurora enthusiasts capturing the magic of the Northern Lights around the world.</p>
+	&nbsp;
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+	<a href="history.html">History</a>
+    <a href="index.html">Gallery</a>
+    <a href="aboutus.html">About Us</a>
+  </nav>
+	&nbsp;
+  <h2>Meet Our Team</h2>
+<div class="team">
+  <div class="top-member">
+    <div class="member">
+      <img src="Tr.Rhena.jpg" alt="Ms. Rhena Mae Montes">
+      <h3>Ms. Rhena Mae Montes</h3>
+      <p>Empowerment Technology Instructor</p>
+    </div>
+  </div>
+  <div class="bottom-members">
+    <div class="member">
+      <img src="Rian.jpg" alt="Mariann Monique Ruiz">
+      <h3>Mariann Monique Ruiz</h3>
+      <p>Student</p>
+    </div>
+    <div class="member">
+      <img src="Ayessa.jpg" alt="Ayessa Dago-oc">
+      <h3>Ayessa Dago-oc</h3>
+      <p>Student</p>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- Music Toggle Button -->
+<button class="music-toggle" onclick="toggleMusic()">🔊</button>
+<audio id="bg-music" src="aur.mp3" loop></audio>
+
+<script>
+  const canvas = document.getElementById('starry-sky');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  const starCount = 150;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  for (let i = 0; i < starCount; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5 + 0.5,
+      alpha: Math.random(),
+      delta: Math.random() * 0.02
+    });
+  }
+
+  function animateStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let star of stars) {
+      star.alpha += star.delta;
+      if (star.alpha <= 0 || star.alpha >= 1) star.delta = -star.delta;
+      ctx.globalAlpha = star.alpha;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+    }
+    requestAnimationFrame(animateStars);
+  }
+
+  animateStars();
+
+  const music = document.getElementById('bg-music');
+  let playing = false;
+  function toggleMusic() {
+    playing ? music.pause() : music.play();
+    playing = !playing;
+  }
+</script>
+
+</body>
+</html>
